@@ -1,4 +1,4 @@
-# ScrapeToolAi
+# 🕷️ ScrapeToolAi
 
 **Super-advanced web scraping framework** combining the best active skills from [Scrapling](https://github.com/D4Vinci/Scrapling) and [Scrapy](https://github.com/scrapy/scrapy), plus AI-powered extraction and your personal data organization layer.
 
