@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapetoolai"
+version = "1.0.0"
+description = "Super-advanced web scraping framework combining Scrapling stealth + Scrapy architecture + AI extraction + personal data organizer"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "consecrating"}]
+
+dependencies = [
+    "httpx>=0.25.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+stealth = [
+    "scrapling[all]>=0.3.0",
+]
+scrapy = [
+    "scrapy>=2.11.0",
+]
+ai = [
+    "openai>=1.0.0",
+    "google-generativeai>=0.3.0",
+]
+api = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+]
+full = [
+    "scrapling[all]>=0.3.0",
+    "scrapy>=2.11.0",
+    "openai>=1.0.0",
+    "google-generativeai>=0.3.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+scrapetool = "scrapetoolai.cli.main:main"
